@@ -7,7 +7,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
 
-    <changeSet id="changelog-2.0" author="sharad">
+    <changeSet id="changelog-2.0" author="delong">
 
         <addColumn tableName="sales_fact">
             <column name="sales_profit" type="numeric"/>

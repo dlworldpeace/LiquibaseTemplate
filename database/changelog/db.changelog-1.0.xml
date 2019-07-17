@@ -6,17 +6,41 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
+    <changeSet id="changelog-1.0" author="delong">
 
-    <changeSet id="changelog-1.0" author="sharad">
-        <sql>create extension hstore </sql> 
-        <sql>create extension dblink </sql>
-        <sql>create schema etl </sql>
+        <createTable tableName="books" remarks="A table to contain all books">
+            <column name="id" type="int">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="author" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="authors" remarks="A table to contain all the authors">
+            <column name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="books" baseColumnNames="author"
+          constraintName="author_fk"
+          referencedTableName="authors" referencedColumnNames="id"/>
+
         <rollback>
-            <sql>drop extension hstore </sql> 
-            <sql>drop extension dblink </sql>
-            <sql>drop schema etl </sql>
+
+            <dropTable cascadeConstraints="true" tableName="books" />
+            <dropTable cascadeConstraints="true" tableName="authors" />
+
         </rollback>
-    </changeSet>  
+
+    </changeSet>
 
 </databaseChangeLog>
 

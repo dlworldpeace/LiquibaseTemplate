@@ -7,7 +7,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
 
-    <changeSet id="changelog-1.2" author="sharad">
+    <changeSet id="changelog-1.2" author="delong">
 
         <createProcedure 
                 path="../scripts/handle_exception.sql"            
