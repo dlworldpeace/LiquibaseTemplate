@@ -7,18 +7,15 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
 
-    <changeSet id="changelog-1.2" author="delong">
+    <changeSet id="changelog-1.1" author="delong">
 
-        <createProcedure 
-                path="../scripts/handle_exception.sql"            
-                relativeToChangelogFile="true">            
-        </createProcedure>
+        <addColumn tableName="books">
+            <column name="price" type="int" defaultValue="0">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
 
-        <rollback>
-
-          <sql> DROP FUNCTION etl.handle_exception(text,text) </sql>
-
-        </rollback>  
+        <!--This has auto-rollback-->
 
     </changeSet>  
 </databaseChangeLog>

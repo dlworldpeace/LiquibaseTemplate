@@ -1,10 +1,9 @@
-package com.sample.postgress.service;
+package com.sample.backend.dao;
 
 import java.util.List;
+import com.sample.backend.entity.Employee;
 
-import com.sample.postgress.entity.Employee;
-
-public interface EmployeeService {
+public interface EmployeeDao {
     List<Employee> findAll();
 
     void insertEmployee(Employee emp);
@@ -13,6 +12,5 @@ public interface EmployeeService {
 
     void executeUpdateEmployee(Employee emp);
 
-    void deleteEmployee(Employee emp);
-
+    public void deleteEmployee(Employee emp);
 }

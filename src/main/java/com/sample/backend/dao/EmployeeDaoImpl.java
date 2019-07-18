@@ -1,4 +1,4 @@
-package com.sample.postgress.dao;
+package com.sample.backend.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -13,8 +13,8 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import com.sample.postgress.entity.Employee;
-import com.sample.postgress.mapper.EmployeeRowMapper;
+import com.sample.backend.entity.Employee;
+import com.sample.backend.mapper.EmployeeRowMapper;
 
 @Repository
 public class EmployeeDaoImpl implements EmployeeDao {

@@ -1,4 +1,4 @@
-package com.sample.postgress.entity;
+package com.sample.backend.entity;
 
 public class Employee {
 

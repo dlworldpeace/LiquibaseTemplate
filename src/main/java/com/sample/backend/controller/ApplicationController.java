@@ -1,4 +1,4 @@
-package com.sample.postgress.controller;
+package com.sample.backend.controller;
 
 import java.util.List;
 import javax.annotation.Resource;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.sample.postgress.entity.Employee;
-import com.sample.postgress.service.EmployeeService;
+import com.sample.backend.entity.Employee;
+import com.sample.backend.service.EmployeeService;
 
 @RestController
 @RequestMapping("/postgressApp")

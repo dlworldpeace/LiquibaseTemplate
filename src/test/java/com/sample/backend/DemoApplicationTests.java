@@ -1,4 +1,4 @@
-package com.sample.postgress;
+package com.sample.backend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

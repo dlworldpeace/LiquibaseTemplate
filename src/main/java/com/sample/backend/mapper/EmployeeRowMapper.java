@@ -1,9 +1,9 @@
-package com.sample.postgress.mapper;
+package com.sample.backend.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
-import com.sample.postgress.entity.Employee;
+import com.sample.backend.entity.Employee;
 
 public class EmployeeRowMapper implements RowMapper<Employee> {
     @Override

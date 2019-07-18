@@ -6,10 +6,10 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet id="changelog-1.1" author="delong">
+    <changeSet id="changelog-1.3" author="delong">
 
         <insert tableName="authors">
-            <column name="id" valueNumeric="01"/>
+            <column name="id" valueNumeric="1"/>
             <column name="name" value="authorname"/>
         </insert>
 
