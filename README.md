@@ -1,4 +1,4 @@
-***Setup MySQL using Docker***
+___Setup MySQL using Docker___
 
 This can be done by following this [tutorial](https://nextbreakpoint.com/posts/article-run-mysql-in-docker-container.html) by pulling the 5.6.44 version of mysql.
 
@@ -14,12 +14,16 @@ or
 
 ***
 
-***Run Server***
+___Test Changes Locally Before Making Commit___
 
-If MySQL is used,
-
-1. run `docker start mysqldb` to start the copy of your local mysql server.
-2. run this **DemoApplication** via Spring Boot.
-3. At `home` directory, run `mvn liquibase:tag -Dliquibase.tag=initial` to create a liquibase tag.
-4. run `mvn liquibase:update` to execute all changesets.
+1. run `docker start mysqldb` to ensure your local mysql server is running.
+2. At `home` directory, run `mvn liquibase:tag -Dliquibase.tag=initial` to create a liquibase tag.
+3. run `mvn liquibase:update` to execute all changesets.
 4. run `mvn liquibase:rollback -Dliquibase.rollbackTag=initial` to revert all changesets.
+
+***
+
+___Continuous Integration___
+
+1. run `docker start mysqldb` to ensure your local mysql server is running.
+21. run this **DemoApplication** to start build via Spring Boot.
