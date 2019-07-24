@@ -42,7 +42,7 @@
     <dependency>
       <groupId>org.liquibase</groupId>
       <artifactId>liquibase-core</artifactId>
-      <version>3.7.0</version>
+      <version>3.6.3</version>
     </dependency>
 
     <dependency>
@@ -66,7 +66,7 @@
       <plugin>
         <groupId>org.liquibase</groupId>
         <artifactId>liquibase-maven-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>3.6.3</version>
         <configuration>
           <propertyFile>liquibase.properties</propertyFile>
         </configuration>
